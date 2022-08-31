@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  min-height: 150px;
+  color: white;
+  background-color: rgba(24, 23, 23, 0.89);
+}
+.footer div {
+  margin-left: 50px;
+  padding-top: 20px;
+}
+.footer > p {
+  margin: 10px 10px;
+  word-break: break-all;
+  display: block;
+  padding-top: 10px;
+}

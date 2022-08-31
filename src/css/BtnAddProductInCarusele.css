@@ -1,0 +1,18 @@
+.addProduct {
+  font-size: 16px;
+  letter-spacing: 2px;
+  background-color: rgba(11, 7, 7, 0.847);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  margin: 5px;
+}
+.addProduct:hover {
+  background-color: rgba(11, 7, 7, 0.273);
+}
+
+.hoverAddProduct:hover {
+  color: rgb(99, 209, 43);
+}

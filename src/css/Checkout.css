@@ -1,0 +1,39 @@
+.flexBoxCheckout {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.myProduct {
+  margin-left: 50px;
+}
+.containerForProduct {
+  display: flex;
+  margin-top: 50px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgb(209, 199, 199);
+}
+.containerForProduct img {
+  width: 100px;
+}
+.infoAboutProductContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoCheckoutPage {
+  width: 250px;
+  display: block;
+}
+
+@media screen and (max-width: 1080px) {
+  .flexBoxCheckout {
+    flex-direction: column;
+  }
+  .logoCheckoutPage {
+    width: 150px;
+  }
+  .myProduct {
+    width: 80%;
+    margin: 20px auto 20px auto;
+  }
+}

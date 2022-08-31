@@ -1,0 +1,49 @@
+.counterContainer {
+  display: flex;
+  align-items: flex-start;
+}
+
+.btnProduct {
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  border: 1px solid black;
+  text-align: center;
+  letter-spacing: -2px;
+  cursor: pointer;
+}
+.inputAddProduct {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid black;
+}
+.info .counterContainer {
+  margin: 50px;
+}
+.info .counterContainer .btnProduct {
+  height: 40px;
+  width: 70px;
+}
+.info .counterContainer .inputAddProduct {
+  height: 40px;
+  width: 70px;
+}
+@media screen and (max-width: 500px) {
+  .info .counterContainer {
+    margin: 25px 0;
+  }
+
+  .counterContainer {
+    width: 100%;
+  }
+  .info .counterContainer .btnProduct {
+    width: 33%;
+  }
+  .info .counterContainer .inputAddProduct {
+    width: 33%;
+  }
+}

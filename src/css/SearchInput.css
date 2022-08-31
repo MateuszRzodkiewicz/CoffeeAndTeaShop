@@ -1,0 +1,56 @@
+.searchResponse {
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  max-height: 300px;
+  width: 50%;
+  overflow-y: scroll;
+  border: 1px solid black;
+}
+.searchResponse::-webkit-scrollbar {
+  width: 0px;
+}
+.searchResponse ul li {
+  list-style: none;
+  padding: 5px 5px 0 5px;
+}
+.searchResponse ul li span {
+  display: block;
+  text-align: right;
+}
+.searchResponse ul li:hover {
+  background-color: rgba(151, 113, 42, 0.873);
+  color: rgb(255, 255, 255);
+}
+
+.inputContainer {
+  width: 50%;
+}
+.inputContainer input {
+  height: 40px;
+  border: 0px;
+  font-size: 18px;
+  border-bottom: 0px solid black;
+}
+.inputContainer input:focus {
+  border: 0px;
+  border-bottom: 0px solid black;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 749px) {
+  .inputContainer {
+    width: 100%;
+  }
+  .searchResponse {
+    border: none;
+    width: 100%;
+    color: rgb(10, 8, 8);
+    background-color: rgb(240, 235, 235);
+  }
+}

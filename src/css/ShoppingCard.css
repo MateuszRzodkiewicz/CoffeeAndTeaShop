@@ -1,0 +1,42 @@
+.shoppingCartFlexContainer {
+  min-height: 90vh;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+.shoppingCardProduct {
+  width: 50%;
+  margin: 100px 0 50px 100px;
+}
+.shoppingCardSummary {
+  width: 30%;
+}
+.shoppingCardSummary h1,
+.shoppingCardProduct h1 {
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+.shoppingCardSummary p {
+  margin-bottom: 10px;
+}
+
+.i {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 880px) {
+  .shoppingCartFlexContainer {
+    margin-top: 50px;
+    display: block;
+    justify-content: flex-start;
+  }
+  .shoppingCardSummary {
+    margin: 10px 0px 50px 10px;
+    width: 90%;
+  }
+  .shoppingCardProduct {
+    margin: 10px auto 50px 10px;
+    width: auto;
+  }
+}

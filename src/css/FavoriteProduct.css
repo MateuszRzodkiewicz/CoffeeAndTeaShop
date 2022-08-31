@@ -1,0 +1,42 @@
+.favoriteProductContainer h1 {
+  text-align: center;
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+#favoriteProductContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.oneFavoritProduct {
+  margin: 50px;
+  width: 255px;
+  height: 340px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid silver;
+}
+
+.favoriteImg {
+  width: 250px;
+  height: 250px;
+}
+
+.favoriteP {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid silver;
+  width: 90%;
+}
+
+@media screen and (max-width: 750px) {
+  .favoriteProductContainer h1 {
+    margin: 50px 10px 0 10px;
+  }
+  #favoriteProductContainer {
+    justify-content: center;
+  }
+}

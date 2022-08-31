@@ -1,0 +1,35 @@
+.containerForContainer {
+  border-bottom: 1px solid black;
+  box-shadow: 0px 12px 5px -12px rgba(66, 68, 90, 1);
+}
+.containerForHeaderMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.containerForHeaderMenu a:nth-child(1) {
+  width: 200px;
+}
+.containerForHeaderMenu a img {
+  display: block;
+  width: 100%;
+}
+.iconContainer {
+  display: flex;
+}
+.icon {
+  font-size: 36px;
+  color: black;
+  padding: 10px;
+  margin-right: 30px;
+}
+.relative {
+  position: relative;
+}
+
+@media screen and (max-width: 400px) {
+  .icon {
+    font-size: 30px;
+    padding: 5px;
+  }
+}

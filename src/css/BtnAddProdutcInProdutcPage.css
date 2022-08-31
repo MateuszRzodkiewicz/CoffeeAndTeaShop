@@ -1,0 +1,43 @@
+.btnAddProductPage {
+  height: 40px;
+  letter-spacing: 1px;
+  background-color: #111211;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+}
+
+.btnAddProductPage:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+/* wartośc not sprawia że własciwosci sa stosowane do elemntu ktory nie spełnia podanego kryterium */
+
+.btnAddProductPage:hover {
+  background-color: #333634;
+}
+
+.btnAddProductPage:focus {
+  box-shadow: rgba(75, 81, 77, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.btnAddProductPage:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btnAddProductPage:active {
+  background-color: #1e211f;
+  box-shadow: rgba(20, 70, 32, 0.2) 0 1px 0 inset;
+}

@@ -1,0 +1,12 @@
+.sectionProducts {
+  width: 70%;
+  margin: 100px auto;
+}
+.ConteinerForDisplayProducts {
+  margin: 0px auto 100px auto;
+  height: 350px;
+}
+
+.swiper {
+  height: 400px;
+}
