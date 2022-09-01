@@ -19,12 +19,12 @@ function App() {
       .then((response) => response.json())
       .then((data) => setProducts(data.Products));
   }, []);
-console.log(process.env.PUBLIC_URL)
+
   return (
     <div className="App">
       <Appcontext.Provider value={products}>
         <ShoppingCardProvider>
-          <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <BrowserRouter basename={`process.env.PUBLIC_URL/${CoffyAndTeaShop}`}>
             <Routes>
               <Route
                 path="/"
