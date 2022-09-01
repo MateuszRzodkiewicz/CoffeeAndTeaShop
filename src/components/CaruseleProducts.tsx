@@ -56,7 +56,7 @@ function CaruseleProducts({
                     <div className="hidden">
                       <img
                         className="scaleImg"
-                        src={product.img}
+                        src={process.env.PUBLIC_URL + product.img}
                         alt={product.nameProduct}
                       />
                     </div>
