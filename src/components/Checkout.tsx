@@ -38,7 +38,7 @@ function Checkout() {
           <h2>Twoje produkty w koszyku:</h2>
           {shoppingCard.map((product) => (
             <div key={product.idProduct} className="containerForProduct">
-              <img src={product.img} alt="procduct" />
+              <img src={process.env.PUBLIC_URL + product.img} alt="procduct" />
               <div className="infoAboutProductContainer">
                 <p style={{ marginTop: "10px" }}>{product.nameProduct}</p>
                 <p style={{ marginTop: "3px", color: "gray" }}>

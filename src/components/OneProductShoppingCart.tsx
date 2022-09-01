@@ -31,7 +31,10 @@ function OneProductShoppingcart({
   return (
     <div className="flexContainerForProduct">
       <NavLink to={`/productPage/${shopCart.idProduct}`}>
-        <img src={shopCart.img} alt={shopCart.nameProduct} />
+        <img
+          src={process.env.PUBLIC_URL + shopCart.img}
+          alt={shopCart.nameProduct}
+        />
       </NavLink>
       <div className="productDescriptionCart">
         <p>

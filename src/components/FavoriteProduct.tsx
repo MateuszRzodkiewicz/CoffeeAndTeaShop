@@ -24,7 +24,7 @@ function FavoriteProduct({
             <NavLink to={`/productPage/${product.idProduct}`}>
               <img
                 className="favoriteImg"
-                src={product.img}
+                src={process.env.PUBLIC_URL + product.img}
                 alt={product.nameProduct}
               />
             </NavLink>

@@ -57,7 +57,10 @@ function ProductPage({
 
           <section className="infoAboutProdut">
             <div>
-              <img src={product?.img} alt={product?.nameProduct} />
+              <img
+                src={process.env.PUBLIC_URL + product?.img}
+                alt={product?.nameProduct}
+              />
             </div>
             <div className="info">
               <p>
