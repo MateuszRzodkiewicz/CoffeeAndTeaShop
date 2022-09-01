@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Product } from "./models/interface";
 import { Appcontext } from "./context/AppContext";
 import Application from "./Application";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import ProductPage from "./components/ProductPage";
 import ShoppingCard from "./components/ShoppingCart";
 import { ShoppingCardProvider } from "./context/ShoppingCardContext";
@@ -24,27 +24,25 @@ function App() {
     <div className="App">
       <Appcontext.Provider value={products}>
         <ShoppingCardProvider>
-          <BrowserRouter basename={process.env.PUBLIC_URL}>
-            <Routes>
-              <Route
-                path="/"
-                element={<Application setProducts={setProducts} />}
-              />
-              <Route
-                path="productPage/:id"
-                element={<ProductPage setProducts={setProducts} />}
-              />
-              <Route
-                path="shoppingCard"
-                element={<ShoppingCard setProducts={setProducts} />}
-              />
-              <Route path="Checkout" element={<Checkout />} />
-              <Route
-                path="favoriteProduct"
-                element={<FavoriteProduct setProducts={setProducts} />}
-              />
-            </Routes>
-          </BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={<Application setProducts={setProducts} />}
+            />
+            <Route
+              path="productPage/:id"
+              element={<ProductPage setProducts={setProducts} />}
+            />
+            <Route
+              path="shoppingCard"
+              element={<ShoppingCard setProducts={setProducts} />}
+            />
+            <Route path="Checkout" element={<Checkout />} />
+            <Route
+              path="favoriteProduct"
+              element={<FavoriteProduct setProducts={setProducts} />}
+            />
+          </Routes>
         </ShoppingCardProvider>
       </Appcontext.Provider>
       <Footer />
