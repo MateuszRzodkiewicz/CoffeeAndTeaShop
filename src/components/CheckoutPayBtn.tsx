@@ -1,13 +1,20 @@
 import { NavLink } from "react-router-dom";
+import { useShoppingCard } from "../context/useShoppingCard";
 import "../css/CheckoutPayBtn.css";
-function checkoutPay() {
+
+function CheckoutPay() {
+  const { shoppingCard } = useShoppingCard();
   return (
     <div className="btnPay">
-      <NavLink to={`/Checkout`}>
+      {shoppingCard.length === 0 ? (
         <button className="checkoutBtn">Przejdź do kasy</button>
-      </NavLink>
+      ) : (
+        <NavLink to={`/Checkout`}>
+          <button className="checkoutBtn">Przejdź do kasy</button>
+        </NavLink>
+      )}
     </div>
   );
 }
 
-export default checkoutPay;
+export default CheckoutPay;

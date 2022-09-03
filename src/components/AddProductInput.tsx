@@ -44,6 +44,13 @@ function AddProductInput({
       setWeight(product?.weight * piece);
     }
   };
+
+  const inputKeyDown = (e: any) => {
+    const invalidChars = ["-", "+", "e", ",", "."];
+    if (invalidChars.includes(e.key)) {
+      e.preventDefault();
+    }
+  };
   return (
     <div className="counterContainer">
       {product && (
@@ -59,12 +66,14 @@ function AddProductInput({
         </button>
       )}
       <input
+        onKeyDown={inputKeyDown}
         className="inputAddProduct"
-        type="text"
+        type="number"
         value={piece}
         onChange={changeProductWeightandPrice}
         onBlur={changeProductWeightandPriceOnBlur}
         min={1}
+        step={1}
       ></input>
       {product && (
         <button className="btnProduct" onClick={counterPlus}>

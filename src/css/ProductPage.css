@@ -59,10 +59,10 @@ div.info {
 
 .swiper-button-next::after {
   color: black;
-  margin-left: 20px;
+  margin-left: 5px;
 }
 .swiper-button-prev:after {
-  margin-right: 20px;
+  margin-right: 5px;
   color: black;
 }
 

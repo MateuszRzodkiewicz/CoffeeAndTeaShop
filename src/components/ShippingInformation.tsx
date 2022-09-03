@@ -65,14 +65,39 @@ function ShippingInformation() {
       valueInputs["firstName"] === "" ||
       valueInputs["lastName"] === "" ||
       valueInputs["adress"] === "" ||
-      valueInputs["city"] === "" ||
-      valueInputs["country"] === "" ||
       valueInputs["postCode"] === "" ||
+      valueInputs["city"] === "" ||
       valueInputs["country"] === "" ||
       valueInputs["email"] === "" ||
       valueInputs["phoneNumber"] === "" ||
       !valueInputs["email"].includes("@")
     ) {
+      console.log(valueInputs["firstName"]);
+      valueInputs["firstName"] === ""
+        ? (flags["flag1"] = true)
+        : (flags["flag1"] = false);
+      valueInputs["lastName"] === ""
+        ? (flags["flag2"] = true)
+        : (flags["flag2"] = false);
+      valueInputs["adress"] === ""
+        ? (flags["flag3"] = true)
+        : (flags["flag3"] = false);
+      valueInputs["postCode"] === ""
+        ? (flags["flag4"] = true)
+        : (flags["flag4"] = false);
+      valueInputs["city"] === ""
+        ? (flags["flag5"] = true)
+        : (flags["flag5"] = false);
+      valueInputs["country"] === ""
+        ? (flags["flag6"] = true)
+        : (flags["flag6"] = false);
+      valueInputs["email"] === "" || !valueInputs["email"].includes("@")
+        ? (flags["flag7"] = true)
+        : (flags["flag7"] = false);
+      valueInputs["phoneNumber"] === ""
+        ? (flags["flag8"] = true)
+        : (flags["flag8"] = false);
+      setFlag({ ...flags });
       alert("Podaj poprawne dane do wysylki");
     } else {
       alert("Dziekujemy za dokonanie zakupu");
