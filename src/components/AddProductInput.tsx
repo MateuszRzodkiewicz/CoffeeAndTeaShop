@@ -46,7 +46,20 @@ function AddProductInput({
   };
 
   const inputKeyDown = (e: any) => {
-    const invalidChars = ["-", "+", "e", ",", "."];
+    const invalidChars = [
+      "-",
+      "+",
+      "e",
+      ",",
+      ".",
+      "q",
+      "w",
+      "e",
+      "r",
+      "t",
+      "y",
+      "u",
+    ];
     if (invalidChars.includes(e.key)) {
       e.preventDefault();
     }
@@ -66,14 +79,15 @@ function AddProductInput({
         </button>
       )}
       <input
+        style={{ color: "black" }}
         onKeyDown={inputKeyDown}
         className="inputAddProduct"
         type="number"
+        disabled
         value={piece}
         onChange={changeProductWeightandPrice}
         onBlur={changeProductWeightandPriceOnBlur}
         min={1}
-        step={1}
       ></input>
       {product && (
         <button className="btnProduct" onClick={counterPlus}>
