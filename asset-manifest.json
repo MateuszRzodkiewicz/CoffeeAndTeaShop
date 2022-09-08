@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CoffyAndTeaShop/static/css/main.428822ff.css",
-    "main.js": "/CoffyAndTeaShop/static/js/main.4d4f8e04.js",
+    "main.js": "/CoffyAndTeaShop/static/js/main.fcfe0095.js",
     "static/media/twojaKawa.jpg": "/CoffyAndTeaShop/static/media/twojaKawa.5bfc683e8d874f0d049d.jpg",
     "index.html": "/CoffyAndTeaShop/index.html",
     "main.428822ff.css.map": "/CoffyAndTeaShop/static/css/main.428822ff.css.map",
-    "main.4d4f8e04.js.map": "/CoffyAndTeaShop/static/js/main.4d4f8e04.js.map"
+    "main.fcfe0095.js.map": "/CoffyAndTeaShop/static/js/main.fcfe0095.js.map"
   },
   "entrypoints": [
     "static/css/main.428822ff.css",
-    "static/js/main.4d4f8e04.js"
+    "static/js/main.fcfe0095.js"
   ]
 }
