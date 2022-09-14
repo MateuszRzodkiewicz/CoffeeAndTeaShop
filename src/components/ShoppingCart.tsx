@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import HeaderMenu from "./HeaderMenu";
 import "../css/ShoppingCard.css";
 import OneProductShoppingcart from "./OneProductShoppingCart";
