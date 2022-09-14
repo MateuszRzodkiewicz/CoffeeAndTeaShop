@@ -1,6 +1,6 @@
 import {
   inputsValue,
-  keyOfFlag,
+  keyOfErrorValue,
   keysOfInputsValue,
 } from "./ShippingInformation";
 function ShippingInputs({
@@ -13,11 +13,11 @@ function ShippingInputs({
   placeholder: string;
   value: inputsValue;
   valueName: keysOfInputsValue;
-  flag: keyOfFlag;
+  flag: keyOfErrorValue;
   updateValue: (
     e: React.FormEvent<HTMLInputElement>,
     valueName: keysOfInputsValue,
-    flag: keyOfFlag
+    flag: keyOfErrorValue
   ) => void;
 }) {
   return (

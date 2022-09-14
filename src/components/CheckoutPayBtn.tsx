@@ -9,7 +9,7 @@ function CheckoutPay() {
       {shoppingCard.length === 0 ? (
         <button className="checkoutBtn">Przejdź do kasy</button>
       ) : (
-        <NavLink to={`/Checkout`}>
+        <NavLink to={`/checkout`}>
           <button className="checkoutBtn">Przejdź do kasy</button>
         </NavLink>
       )}

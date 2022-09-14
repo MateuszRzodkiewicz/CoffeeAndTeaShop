@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 function HeaderMenu() {
   const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
   const [search, setSearch] = useState<boolean>(false);
+
   useEffect(() => {
     window.addEventListener("resize", () => {
       setInnerWidth(window.innerWidth);
@@ -24,11 +25,11 @@ function HeaderMenu() {
         <NavLink to="/">
           <img src={twojaKawa} alt="twojaKawa" />
         </NavLink>
-        {innerWidth < 750 ? null : <SearchInput innerWidth={innerWidth} />}
+        {innerWidth > 750 && <SearchInput />}
 
         <div className="iconContainer">
           <div>
-            {innerWidth > 749 ? null : (
+            {innerWidth < 749 && (
               <i className="fas fa-search icon" onClick={showSearch} />
             )}
           </div>
@@ -46,7 +47,7 @@ function HeaderMenu() {
         </div>
       </div>
 
-      {search ? <SearchInput innerWidth={innerWidth} /> : null}
+      {innerWidth < 750 && search ? <SearchInput /> : null}
     </div>
   );
 }

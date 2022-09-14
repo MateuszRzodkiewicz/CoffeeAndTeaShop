@@ -26,9 +26,9 @@ function ProductPage({
     window.scrollTo(0, 0);
   }, [pathname]);
   useEffect(() => {
-    const finde = products.find((product) => product.idProduct === id);
-    if (finde) {
-      setProduct(finde);
+    const found = products.find((product) => product.idProduct === id);
+    if (found) {
+      setProduct(found);
     }
     setPiece(1);
   }, [id, products]);
@@ -36,8 +36,6 @@ function ProductPage({
   useEffect(() => {
     if (product !== null) {
       setAmount(product.price);
-    }
-    if (product !== null) {
       setWeight(product.weight);
     }
   }, [product]);

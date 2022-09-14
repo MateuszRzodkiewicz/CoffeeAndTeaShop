@@ -37,7 +37,7 @@ function App() {
               path="shoppingCard"
               element={<ShoppingCard setProducts={setProducts} />}
             />
-            <Route path="Checkout" element={<Checkout />} />
+            <Route path="checkout" element={<Checkout />} />
             <Route
               path="favoriteProduct"
               element={<FavoriteProduct setProducts={setProducts} />}

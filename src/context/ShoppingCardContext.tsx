@@ -18,10 +18,10 @@ export const ShoppingCardProvider = ({
   children,
 }: React.PropsWithChildren<unknown>) => {
   const [shoppingCard, setShoppingCard] = useState<any>([]);
-  const subctratProduct = (shopCart: any) => {
+  const subctratProduct = (product: any) => {
     setShoppingCard(
       shoppingCard.filter(
-        (oneProduct: any) => oneProduct.idProduct !== shopCart.idProduct
+        (oneProduct: any) => oneProduct.idProduct !== product.idProduct
       )
     );
   };

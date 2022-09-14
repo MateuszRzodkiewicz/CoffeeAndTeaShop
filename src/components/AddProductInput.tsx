@@ -32,36 +32,16 @@ function AddProductInput({
     }
   };
 
-  const changeProductWeightandPrice = (
+  const changeProductWeightAndPrice = (
     e: React.FormEvent<HTMLInputElement>
   ) => {
     let value = Number(e.currentTarget.value);
     setPiece(value);
   };
-  const changeProductWeightandPriceOnBlur = () => {
+  const changeProductWeightAndPriceOnBlur = () => {
     if (product) {
-      setAmount(product?.price * piece);
-      setWeight(product?.weight * piece);
-    }
-  };
-
-  const inputKeyDown = (e: any) => {
-    const invalidChars = [
-      "-",
-      "+",
-      "e",
-      ",",
-      ".",
-      "q",
-      "w",
-      "e",
-      "r",
-      "t",
-      "y",
-      "u",
-    ];
-    if (invalidChars.includes(e.key)) {
-      e.preventDefault();
+      setAmount(product.price * piece);
+      setWeight(product.weight * piece);
     }
   };
   return (
@@ -80,13 +60,12 @@ function AddProductInput({
       )}
       <input
         style={{ color: "black" }}
-        onKeyDown={inputKeyDown}
         className="inputAddProduct"
         type="number"
         disabled
         value={piece}
-        onChange={changeProductWeightandPrice}
-        onBlur={changeProductWeightandPriceOnBlur}
+        onChange={changeProductWeightAndPrice}
+        onBlur={changeProductWeightAndPriceOnBlur}
         min={1}
       ></input>
       {product && (

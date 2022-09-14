@@ -3,23 +3,13 @@ import logo from "../pictures/twojaKawa.jpg";
 import ShippingInformation from "./ShippingInformation";
 import "../css/Checkout.css";
 import { useShoppingCard } from "../context/useShoppingCard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useTotalAmount } from "../context/useTotalAmount";
 
 function Checkout() {
   const { shoppingCard } = useShoppingCard();
-  const [totalAmount, setTotalAmount] = useState<any>();
+  const { totalAmount, totalAmountFunction } = useTotalAmount();
 
-  const totalAmountFunction = () => {
-    const arrayAmount = shoppingCard.map(
-      (oneProductAmount: any) => oneProductAmount.price * oneProductAmount.piece
-    );
-
-    const totalAmountt = arrayAmount.reduce(
-      (prev: any, next: any) => prev + next,
-      0
-    );
-    setTotalAmount(totalAmountt);
-  };
   useEffect(() => {
     totalAmountFunction();
     // eslint-disable-next-line react-hooks/exhaustive-deps

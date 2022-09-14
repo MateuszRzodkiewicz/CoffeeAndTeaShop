@@ -3,13 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { Appcontext } from "../context/AppContext";
 import "../css/SearchInput.css";
 import { Product } from "../models/interface";
-function SearchInput({ innerWidth }: { innerWidth: number }): JSX.Element {
+function SearchInput() {
   const [inputValue, setInputValue] = useState<string>("");
-  const [flagDiv, setFlagDiv] = useState(false);
+  const [flagDiv, setFlagDiv] = useState<boolean>(false);
   const divRef = useRef(null);
-
   const products = useContext<Product[] | []>(Appcontext);
-
   const navigate = useNavigate();
 
   const changeValue = (e: React.FormEvent<HTMLInputElement>) => {

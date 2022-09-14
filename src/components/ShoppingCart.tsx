@@ -5,25 +5,15 @@ import OneProductShoppingcart from "./OneProductShoppingCart";
 import { useShoppingCard } from "../context/useShoppingCard";
 import CheckoutPayBtn from "./CheckoutPayBtn";
 import { Product } from "../models/interface";
+import { useTotalAmount } from "../context/useTotalAmount";
 function ShoppingCard({
   setProducts,
 }: {
   setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
 }) {
   const { shoppingCard } = useShoppingCard();
-  const [totalAmount, setTotalAmount] = useState<any>();
+  const { totalAmount, totalAmountFunction } = useTotalAmount();
 
-  const totalAmountFunction = () => {
-    const arrayAmount = shoppingCard.map(
-      (oneProductAmount: any) => oneProductAmount.price * oneProductAmount.piece
-    );
-
-    const totalAmountt = arrayAmount.reduce(
-      (prev: any, next: any) => prev + next,
-      0
-    );
-    setTotalAmount(totalAmountt);
-  };
   useEffect(() => {
     totalAmountFunction();
     // eslint-disable-next-line react-hooks/exhaustive-deps
