@@ -15,7 +15,7 @@ function App() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
-    fetch("products.json")
+    fetch(process.env.PUBLIC_URL + "/products.json")
       .then((response) => response.json())
       .then((data) => setProducts(data.Products));
   }, []);

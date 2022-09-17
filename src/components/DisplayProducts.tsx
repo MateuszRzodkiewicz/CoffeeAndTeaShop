@@ -1,9 +1,10 @@
 import "../css/DisplayProducts.css";
 import { Product } from "../models/interface";
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import { Appcontext } from "../context/AppContext";
 import CaruseleProducts from "./CaruseleProducts";
 import { ProductType } from "../constants/enum";
+
 function DisplayProducts({
   setProducts,
 }: {
@@ -11,14 +12,21 @@ function DisplayProducts({
 }) {
   const products = useContext<Product[] | []>(Appcontext);
 
-  const coffee = products.filter(
-    (product: Product) => product.typeProduct === ProductType.Coffee
+  const coffee = useMemo(
+    () =>
+      products.filter(
+        (product: Product) => product.typeProduct === ProductType.Coffee
+      ),
+    [products]
   );
-  const tea = products.filter(
-    (product) => product.typeProduct === ProductType.Tea
+  const tea = useMemo(
+    () => products.filter((product) => product.typeProduct === ProductType.Tea),
+    [products]
   );
-  const yerba = products.filter(
-    (product) => product.typeProduct === ProductType.Yerba
+  const yerba = useMemo(
+    () =>
+      products.filter((product) => product.typeProduct === ProductType.Yerba),
+    [products]
   );
 
   return (

@@ -20,9 +20,6 @@ function CaruseleProducts({
   const [innerWidth, setInnerWidth] = useState<number>(window.innerWidth);
   const addToFavorite = useAddToFavorite();
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setInnerWidth(window.innerWidth);
-    });
     if (innerWidth < 640) {
       setNumberVisible(1);
     } else if (innerWidth < 1080) {
@@ -31,7 +28,11 @@ function CaruseleProducts({
       setNumberVisible(3);
     }
   }, [innerWidth]);
-
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setInnerWidth(window.innerWidth);
+    });
+  }, []);
   return (
     <>
       {

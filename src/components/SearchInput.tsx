@@ -1,4 +1,4 @@
-import { useState, useContext, useRef, useEffect } from "react";
+import { useState, useContext, useRef, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { Appcontext } from "../context/AppContext";
 import "../css/SearchInput.css";
@@ -38,8 +38,14 @@ function SearchInput() {
   }
   useChageDivFlag(divRef);
 
-  const searchProductList = products.filter((product: Product) =>
-    product.nameProduct.toLowerCase().includes(inputValue.toLocaleLowerCase())
+  const searchProductList = useMemo(
+    () =>
+      products.filter((product: Product) =>
+        product.nameProduct
+          .toLowerCase()
+          .includes(inputValue.toLocaleLowerCase())
+      ),
+    [inputValue, products]
   );
 
   const actualySerchItem = searchProductList.map(

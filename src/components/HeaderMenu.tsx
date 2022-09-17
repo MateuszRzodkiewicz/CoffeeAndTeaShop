@@ -13,7 +13,7 @@ function HeaderMenu() {
     window.addEventListener("resize", () => {
       setInnerWidth(window.innerWidth);
     });
-  }, [innerWidth]);
+  }, []);
 
   const showSearch = () => {
     setSearch(!search);
